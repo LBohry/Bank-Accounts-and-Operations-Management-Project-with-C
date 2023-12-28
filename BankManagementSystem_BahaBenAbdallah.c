@@ -172,7 +172,7 @@ void transaction_details() { //function to print all the transaction details (in
                     printf("Error opening file\n");
                 return;
                 }
-            printf("TRANSACTION DETAILS\n");
+            printf("TRANSACTION DETAILS\n"); //this is just printed as the beginning of the file to be clearer
             for (int j = 0; j < 50; j++) {
                 printf("-");
             }
@@ -192,13 +192,11 @@ void transaction_details() { //function to print all the transaction details (in
              printf("Press any key to go back to menu..");
             getch();
             system("cls");
-            return;
             fclose(accounts[i].transFile);
+            return;
+            
         }
     }
-
-    printf("Account not found.\n");
-
 
 }
 
@@ -239,9 +237,9 @@ void print_all_accounts() { //prints the details of all accounts
         printf("------------------------------------\n");
     }
 
-printf("Press any key to go back to menu..");
-getch();
-system("cls");
+    printf("Press any key to go back to menu..");
+    getch();
+    system("cls");
 }
 
 void transfer_money() { //this transfers money from one account to another
