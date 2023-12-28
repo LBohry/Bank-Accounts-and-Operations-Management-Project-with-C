@@ -29,7 +29,7 @@ void withdraw_money();
 void transaction_details();
 int AccountExists(int accid);
 
-int AccountExists(int accid){
+int AccountExists(int accid){ //function to check if an account exists or not 
     for(int i=0; i<num_accounts; i++) {
         if(accounts[i].accNo == accid) {
             return 1;
@@ -78,7 +78,7 @@ void create_account(){
   system("cls");
   return;
 }
-void update_account_info() {
+void update_account_info() { //function  to update the username or the number of an account
 
   int accNo;
   int accNoAux;
@@ -127,7 +127,7 @@ void update_account_info() {
 
 }
 
-void delete_account() {
+void delete_account() { 
     system("cls");
     int account_number;
 
@@ -153,7 +153,7 @@ void delete_account() {
     }
 }
 
-void transaction_details() {
+void transaction_details() { //function to print all the transaction details (in case of deposits, withdrawl, transfers, etc)
     system("cls");
     int account_number;
 
@@ -202,7 +202,7 @@ void transaction_details() {
 
 }
 
-void print_account_details() {
+void print_account_details() { //function to print the name, account number, and balance of an account
     system("cls");
     int account_number;
 
@@ -230,7 +230,7 @@ void print_account_details() {
 
 }
 
-void print_all_accounts() {
+void print_all_accounts() { //prints the details of all accounts
     system("cls");
     for (int i = 0; i < num_accounts; i++) {
         printf("Account number: %d\n", accounts[i].accNo);
@@ -244,7 +244,7 @@ getch();
 system("cls");
 }
 
-void transfer_money() {
+void transfer_money() { //this transfers money from one account to another
     system("cls");
     time_t tm;
     time(&tm);
@@ -302,7 +302,7 @@ void transfer_money() {
     return;
 }
 
-void deposit_money() {
+void deposit_money() { //this deposits a certain ammount into a given account
     struct Account *account = NULL;
     system("cls");
     int account_number;
@@ -347,7 +347,7 @@ void deposit_money() {
     return;
 
 }
-void withdraw_money() {
+void withdraw_money() { //this withdrawls a certain ammount from an account 
     struct Account *account;
     system("cls");
     int account_number;
