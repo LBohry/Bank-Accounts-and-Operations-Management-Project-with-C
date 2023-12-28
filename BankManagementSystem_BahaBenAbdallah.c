@@ -58,9 +58,8 @@ void create_account(){
 
   acc.balance = 20;
 
-  // Open transaction file for account
 
-  sprintf(acc.filename, "%d_trans.txt", acc.accNo);
+  sprintf(acc.filename, "%d_trans.txt", acc.accNo); //this gives the filename as accountnumber_trans.txt
   acc.transFile = fopen(acc.filename, "w");
 
   if(!acc.transFile) {
@@ -68,7 +67,7 @@ void create_account(){
     return;
   }
 
-  fprintf(acc.transFile, "Account created\n");
+  fprintf(acc.transFile, "Account created\n"); //adding to the transactions file "Account created" since it's the same as depositing 20TND at the tunisian banks
   fclose(acc.transFile);
   accounts[num_accounts++] = acc;
 
